@@ -1,6 +1,7 @@
 OSI model(open system inter connection model):
 LAYERS OF OSI MODEL:
 1.Application layer:
+
  This includes the protocols that are required for an application to work correctly.
 This layer is used by network appliactaions ie application that works only over a network connection(eg: Google chrome)
 This layer allows to do various functions like :
@@ -9,7 +10,8 @@ Web surfing(using HTTP /HTTPS protocols)
 emails(using SMTP Protocols)
 Virtual terminals(using Telnet)
 
-2.Presentation layer:This layer receives data from the application layer.
+2.Presentation layer:
+This layer receives data from the application layer.
 The datas are in the form of characters and numbers.
 This layer convert the number to machine understandable  binary formats.
 Data compression takes place in this layer.It can be either lossy  or lossless.
@@ -49,7 +51,7 @@ eg:online movies ,DNS etc
 1.Connection oriented transmission(This is done via TCP)
 2.Connectionless Transmission(This transmission is done via UDP).
 
-5.N/W layer: 
+5.Network layer: 
 Data units in n/w layer  are called packets.
 Functions of this layer are:
 Logical Addressing.IP Addressing done in n/w layer is called as logical addressing.
