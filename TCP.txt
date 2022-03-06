@@ -1,0 +1,118 @@
+OSI model(open system inter connection model):
+LAYERS OF OSI MODEL:
+1.Application layer:
+ This includes the protocols that are required for an application to work correctly.
+This layer is used by network appliactaions ie application that works only over a network connection(eg: Google chrome)
+This layer allows to do various functions like :
+file transfer (using FTP protocol)
+Web surfing(using HTTP /HTTPS protocols)
+emails(using SMTP Protocols)
+Virtual terminals(using Telnet)
+
+2.Presentation layer:This layer receives data from the application layer.
+The datas are in the form of characters and numbers.
+This layer convert the number to machine understandable  binary formats.
+Data compression takes place in this layer.It can be either lossy  or lossless.
+This reduces the amount of memory used to store a file.
+This used for the videos and audios.
+To maintain the integrity of data it is encrypted before transmission.
+Sender side(encrypted) Receiver side(Decrypted).SSL,Secure Socket layer is used of encryption and decryption.
+3 major functions of Presentation layer are:
+1.Translation
+	2.Compression 
+	3.Encryption or decryption
+3.Session layer:
+Helps in setting up and managing connections that enables us to send and receive data followed by treminaiton of the connections.
+Session layer has its own helps can APIs.
+NETBIOS/Network Basic i/p or o/p system is an eg of APIs
+In this layer there is an authentication and authorizatoin process done before communicating the data.
+This layer keeps the track of the files that are being downloaded.
+This layer helps in session management,authentication and authorization.
+     4.Transport layer:
+This layer controls the reliablity of communication through 
+Segmentation:In this the data received from then session layer is divide into small blocks called segments.
+Each segment contains source and destination port numbers and a sequence number.
+port number helps to direct to then correct application.
+Sequence number is used to reassemble the data in correct order.
+ 
+Flow control:Transport layer controls amount of data being transmitted.
+This help in increase and decrease of the amount of the space as requested by the other end .
+Error control:in case some data packet is missing the transport layer automatically repeat the request.So the missing data can be retransmitted
+A group of bits called checksum is added to each segments by the transport  layer to receive the corrupted signal.
+
+Protocols of TRANSPORT LAYER:
+1.Transmisson control protocol(TCP):They provide feedback on data being transmitted.
+eg:web,FTP etc.
+2.User datagram protocol(UDP):This is faster then TCP as they donot provide any feedback of data being transmitted.
+eg:online movies ,DNS etc
+* Transport layer provides 2 types of services:
+1.Connection oriented transmission(This is done via TCP)
+2.Connectionless Transmission(This transmission is done via UDP).
+
+5.N/W layer: 
+Data units in n/w layer  are called packets.
+Functions of this layer are:
+Logical Addressing.IP Addressing done in n/w layer is called as logical addressing.
+	ie IPv4 and IPv6
+Each segment is allocated with sender and receiver IP  address.
+ip address are assigned to ensure each data packets reachs the crt destination
+Routing:It is a method of  moving the data packet from the source to the destination.It is based on the logical addressing.
+mask- in this the 1st three number represents the network IP address last combination represents the host B.
+So based on the IP address the data will first reach the network and then to host B.
+Path determination:
+OSPF: Open sort path first
+BGP: Border Gate way Protocol
+IS-IS :Intermediate service to intermediate service protocol.
+6.Data link :
+Receives data packets from  the network layer.Data packets stores the address of the sender and receiver.
+There 2 kinds of addressing in data link layer.
+1.Logical Addressing : is done at network layer
+2.Physical Addressing :is done in data link layer where the MAC address of the sender and receiver are stored in the data packets to form frame
+MAC Address is the 12 digit alphanumeric number that is embedded in the n/w interface card of the computer.
+This layer performs 2 basic functions:
+It allows then upper layer of OSI model to access the media using techniques called framing.
+It controls how data is placed and received from the media)
+  
+7.Physical layer:
+This layer converts the binary bits to signals and transmit over local media.
+signal generated is based on the media being used.
+
+TRANSMISSION CONTROL PROTOCOL
+TCP PROTOCOL:This takes place in the transportation layer
+TCP HEADER:
+Source port (2 bytes)
+destination port(2 bytes)
+sequence number(4 bytes)
+acknowledgement num(4bytes)
+window size(2 bytes)whta size the packet has.
+urgent pointer(2 bytes)
+checksum(2 bytes)
+
+The TCP Connection is established by using 3 way hand shake method:
+1.sync(from client to server)
+2.sync+ack(from server to client)
+3.ack(from server to client)
+5 Layers in TCP/IP Model are:
+1.Application Layer.
+2.Transportation layer.
+3.network layer.
+4.data link layer and
+5. physical layer.
+
+If there is no response within the specified response time then the request will be sent back to the clients from the server.Thn again the client will sent the request to the server.
+The client will send the packets and wait for the ack.There will be separate acks for each packets.
+It is reliable(since it follows flow and error control mechanism)
+Full duplex protocol(ie the data can be transfered from both sides at the same time)
+The connection btwn client and server will not come to an end until all the data packets are received.
+This allows to avoid errors like "checksum".
+If the checksum is equal then it means tat is the required data.
+
+Since it is used with an IP protocol they are referred to as a TCP/IP .
+Actually it takes the data from the application layer and divides the data into several packets n transmits these packets to the destination.
+It will reassemble and transmits them to the app layer.
+The acknowledge sent will be either +ve / -ve.So that the sender can know whether the data packethas been received or has to be resend.
+The data exchange will occur only after the connection establishment.
+Stream-oriented:-It sends the data in the form of stream of bytes n allow the receivers to accept the data in the form of a stream of  bytes.
+An imaginary tube is created to send and receive data that imaginary tube is known as virtual circuit.This circuit carries theb stream of bytes across the internet.
+The transport layer creates 65,000 ports so the multiple applications can be accessed at the same time.It takes  the data from the upper layer and divides them into smaller packets and then transmits them to the network layer.
+The congestion is eliminated using the congestion avoidance algorithm which includes various schemes asuch as additive increase/multipliactive decrease(AIMD), slow start and congestion window.
