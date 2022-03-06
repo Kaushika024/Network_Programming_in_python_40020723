@@ -1,0 +1,92 @@
+USER DATAGRAM PROTOCOL
+User datagram Protocol(UDP) is a metadata.It usually contains the information of the source and destination of the data.
+UDP is also present in the transport layer.
+It is connectionless and unreliable.
+UDP is used for streaming videos
+It is connectionless and unreliable 
+For real time services like computer gaming,voice or video communication,live conferences.
+UDP permits packets to be dropped instead of processijng delayed packets.
+There is no error checking like as in TCP.
+There is only request and response, there will not be any acknowledgement.
+UDP leverage hacking.
+
+UDP HEADER:
+ 
+UDP port number fields are each 16 bits long, therefore the range for port numbers is defined from 0 to 65535.
+Where 0 is reserved. Port numbers help to distinguish different user requests or processes. 
+Source Port: Source Port is a 2 Byte long field used to identify the port number of the source.
+Destination Port: It is a 2 Byte long field, used to identify the port of the destined packet.
+Length: Length is the length of UDP including the header and the data. It is a 16-bits field.
+Checksum: Checksum is 2 Bytes long field. It is the 16-bit one’s complement of the one’s complement sum of the UDP header, the pseudo-header of information from the IP header, and the data, padded with zero octets at the end (if necessary) to make a multiple of two octets.
+
+
+How a computer works?
+IP address:It is the id from where a system receives a data.
+The client will use an IP  address and send the require data to the destination.
+The port number vary from 0 - 12000.
+For local host the IP address is fixed "127.0.0.1",local host is our own system from where we fetch the data.
+
+SOCKET:
+Socket is a  point where it is a channel for sending and receiving data.It is a combination of IP address and port .
+Port number: It is the place from where the system will receive the information from that particular place.
+Suppose the system can have many number of ports then some informations are stored in that particular place and the information can be retrieved only from the particular place.
+
+CLIENT -SERVER ARCHITECTURE:
+Whenever the client requires a data it sends a request to the server, so the server will send the requested data to the server.
+The requested data are transmitted over the internet from the server to the client.It can be mobile to laptop (or) desktop to mobile(or) desktop to laptop ,anything.
+
+Applications of UDP:
+For simple request-response communication  when the size of data is less.
+UDP takes a datagram from Network Layer, attaches its header, and sends it to the user. So, it works fast.
+
+IP Address:
+Internet protocol address is the rule that makes internet work.
+IP address types-
+1.IPV4:
+This internet protocol versio consists of 4 numbers separated by dot.
+The range of the number is between (0-255)10 .But they are converted to binary values as 0's and 1's.
+Each N is of size 8 bits , so ipv4 is the sequence of 32 bits.
+In IPV4 unique sequence of 0's and 1's are assigned to each computer.
+2.IPV6:
+It is made up of 128bits IP address.
+It is a group of 8 hexadecimal numbers separated by colons
+xxxx:xxxx:xxxx:xxxx:xxxx:xxxx:xxxx:xxxx
+A total of 2^128 bits is stored in the internet to address the amout of devices .
+
+CLASSIFICATION OF IP ADDRESS:
+1.Dynamic IP Address:
+	IP address keeps changing every time when we get connected over an internet.For every new serach the IP address changes within the range in the ISP.
+2.Static IP Address:
+	Addresses never change here.They remain permanent.
+eg:DNS Server:By using the DNS Server it is easy to track the location  of the system.
+Hence it is less secure than Dynamic IP Address.
+
+Difference between TCP and UDP:
+1.Type of Service:TCP is a connection-oriented protocol.
+	               UDP is the datagram-oriented protocol.
+2.Reliability:TCP is reliable.
+	    Delivery of the data to the destination is not guaranteed in UDP.
+3.Error Checking Mechanism:TCP provides flow control and acknowledgement of data.
+		                  UDP has only basic error checking mechanism using checksums.
+4.Acknowledgement:In TCP there is acknowledge segment.
+		In UDP there is no acknowledgement segment.
+5.Sequence:Sequencing of data is a feature of TCP ie the packets are received in an order.
+	    There is no sequencing in UDP.If the order is required it has to be managed by the application layer.
+6.Speed:TCP is slower than UDP.
+                     UDP is faster and more efficient than TCP.
+7.Retransmission:Retransmission is possible in TCP 
+	                 There is no retransmission inTCP.
+8.Header Length:TCP has a 20-60 bytes variable length header.
+	                       UDP has an 8 bytes fixed - length header.
+9.Weigth:TCP is heavy-weigth.
+	        UDP is light weigth.
+10.Handshaking Techniques: TCP uses hanshakes such as SYN,ACK ,SYN-ACK.
+             Since UDP is connectionless protocol it doesn't use any handshaking techniques.
+11.Broadcasting: TCP doen't support broadcasting.
+                                   UDP supports  broadcasting.
+12.Protocols:TCP is used by HTTP,HTTPS,FTP,SMTP and Telnet.
+	               UDP is used byNS,DHCP,TFTP,SNMP,RIP and VoIP.
+13.Stream Type:TCP connection is a byte stream.
+	             UDP connectioin is message stream
+14.Overhead:Low but higher than UDP.
+	       Very low.
